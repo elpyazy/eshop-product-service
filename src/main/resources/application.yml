@@ -1,16 +1,11 @@
-#eureka:
-#  client:
-#    service-url:
-#      defaultZone: http://localhost:8761/eureka/  # URL of the Eureka server
-
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/eshop-db
+      uri: mongodb+srv://eshopdb:eshopdb@cluster0.ws1zrdj.mongodb.net/eshop-db?retryWrites=true&w=majority&appName=Cluster0
 
 #Actuator Prometheus config
 management:
   endpoints:
     web:
       exposure:
-        include: *
+        include: prometheus
